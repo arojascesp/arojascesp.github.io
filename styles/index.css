@@ -1,0 +1,228 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;900&family=League+Spartan:wght@100;200;400&display=swap');
+
+/* elementos de arriba hacia abajo */
+html {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+body {
+  font-size: 16px;
+  font-family: Arial, sans-serif;
+  margin: 0;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  margin: .6em .2em;
+  align-items: center;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+main {
+  margin: 0;
+}
+
+
+/*  clases: de arriba hacia abajo*/
+.navbar-title {
+  display: flex;
+  flex-direction: column;
+  font-size: 3.5em;
+  font-family: 'League Spartan', sans-serif;
+  padding-left: .8em;
+  font-weight: 400;
+}
+.navbar-exp-title {
+  text-align: end;
+  font-weight: 400;
+  font-size: .35em;
+}
+
+.hidden {
+  display: none;
+}
+
+.navbar-items {
+  margin-right: .5em;
+}
+
+.banner-img {
+  margin: 0;
+  width: 100%;
+  height: 20vw;
+  object-fit: cover;
+}
+
+.profile {
+  display: flex;
+  justify-content: center;
+  width: 80vw;
+  margin: 1em 1em;
+  align-items: center;
+}
+
+.profile-img {
+  width: 18vw;
+  height: 18vw;
+  border-radius: 50%;
+}
+
+.profile-img-text {
+  display: flex;
+  justify-content: center;
+}
+
+.profile-text {
+  margin-left: 1.2em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-family: 'Lato';
+}
+
+.profile-name {
+  font-size: 2.2em;
+  letter-spacing: .05em;
+  font-weight: 900;
+  margin-bottom: 0;
+}
+
+.profile-followers {
+  margin-top: .3em;
+  margin-left: .2em;
+  font-weight: 300;
+  font-size: 1.3em;
+  color: gray;
+}
+
+.main-title {
+  font-family: 'Lato' , sans-serif;
+  font-size: 2em;
+  font-weight: 400;
+  letter-spacing: .02em;
+  line-height: 1em;
+  text-align: center;
+}
+
+.video {
+  width: 70vw;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  margin: 0 auto 1em auto;
+}
+
+.video-img {
+  width: 100%;
+}
+
+.video-text {
+  display: flex;
+  flex-direction: column;
+  justify-content:left;
+  margin-left: 0;
+}
+
+.video-title {
+  font-size: 1.7em;
+  text-align: start;
+  margin: .3em 0;
+}
+
+.video-info {
+  text-align: start;
+  margin: .2em 0 0 0;
+  font-size: 1.5em;
+  font-weight: 100;
+  color: gray;
+}
+
+@media(min-width: 1000px) {
+  header {
+    height: 10vh;
+    margin-right: 4em;
+  }
+
+  .hidden {
+    display: inline;
+  }
+
+
+  .navbar-items ul {
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  .navbar-item {
+    margin: auto 1em;
+  }
+  
+  .navbar-title {
+    margin-left: 2em;
+  }
+
+  .banner-img {
+    height: 15vw;
+  }
+
+  .profile {
+    width: 90vw;
+    justify-content: space-between;
+  }
+
+  .profile-img-text {
+    margin-left: 4em;
+    align-items: center;
+  }
+
+  .btn {
+    cursor: pointer;
+    border-radius: 0;
+    border: none;
+    font-size: 1.5em;
+    padding: 1em;
+    margin: .5em;
+    color: white;
+  }
+
+  .btn-primary {
+    background:rgb(146,220,229);
+  }
+
+  .btn-danger {
+    background: rgb(239,100,97);
+  }
+
+  .profile-img {
+    width: 5vw;
+    height: 5vw;
+  }
+
+  .main-title {
+    text-align: start;
+    margin-left: 2em;
+  }
+
+  .main-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+  }
+
+  .video {
+    width: 20vw;
+    height: auto;
+    margin: 1em 2em;
+  }
+}
