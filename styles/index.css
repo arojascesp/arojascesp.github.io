@@ -84,6 +84,7 @@ main {
 .profile-img-text {
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
 .profile-text {
