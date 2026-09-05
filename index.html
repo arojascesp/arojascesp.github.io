@@ -5,12 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./styles/index.css" />
-    <title>Gigeo Art</title>
+    <title>Ari Rojas</title>
   </head>
   <body>
     <header>
       <h1 class="navbar-title">
-        <sup class="navbar-exp-title"> ART</sup>GIGEO
+        <sup class="navbar-exp-title"> ARI</sup>ROJAS
       </h1>
 
       <nav class="navbar-items">
@@ -99,111 +99,165 @@
       <div class="profile">
         <div class="profile-img-text">
           <img
-            src="./styles/assets/profile-image.png"
-            alt="Yuki Mukami's photo"
+            src="./assets/profile_photo.jpeg"
+            alt="Ari Rojas junto a su perro"
             class="profile-img"
           />
           <div class="profile-text">
-            <h2 class="profile-name">Yuki Mukami</h2>
-            <h5 class="profile-followers">30.000 seguidores</h5>
+            <h2 class="profile-name">Ari Rojas</h2>
+            <p class="profile-description">
+              Software Engineer especializado en desarrollo web, fullstack e
+              integración de IA, con enfoque en soluciones seguras, mantenibles y
+              orientadas a producto.
+            </p>
           </div>
-        </div>
-        <div class="profile-buttons hidden">
-          <button class="btn btn-primary">Mensaje</button>
-          <button class="btn btn-danger">Seguir</button>
         </div>
       </div>
-      <h3 class="main-title">Videos populares</h3>
+      <h3 class="main-title" id="projects">Proyectos</h3>
       <article class="main-content">
-        <div class="video">
+        <a
+          class="video project-card"
+          href="#addet-desktop"
+          aria-label="Ver proyecto Addet Desktop"
+        >
           <img
-            src="./styles/assets/image-1.png"
-            alt="Después de la vela - Yuki Mukami"
+            src="./assets/adet-desktop-desktop-view.png"
+            alt="Panel principal del proyecto Addet Desktop"
             class="video-img"
           />
           <div class="video-text">
-            <h3 class="video-title">Después de la vela - Yuki Mukami</h3>
-            <p class="video-info">16k vistas - 1 semana atrás</p>
+            <h3 class="video-title">Addet Desktop</h3>
+            <p class="video-info">Aplicación de gestión · Desktop y mobile</p>
           </div>
-        </div>
-        <div class="video">
+        </a>
+        <a
+          class="video project-card"
+          href="#portafolio"
+          aria-label="Ver proyecto Portafolio"
+        >
           <img
-            src="./styles/assets/image-2.png"
-            alt="Far Away - Yuki Mukami"
+            src="./assets/portafolio-antiguo-desktop-view.png"
+            alt="Vista de escritorio del portafolio anterior"
             class="video-img"
           />
           <div class="video-text">
-            <h3 class="video-title">Far Away - Yuki Mukami</h3>
-            <h4 class="video-info">100k vistas - 1 mes atrás</h4>
+            <h3 class="video-title">Portafolio</h3>
+            <p class="video-info">Sitio personal · Desktop y mobile</p>
           </div>
-        </div>
-        <div class="video">
-          <img
-            src="./styles/assets/image-3.png"
-            alt="City - Yuki Mukami"
-            class="video-img"
-          />
-          <div class="video-text">
-            <h3 class="video-title">City - Yuki Mukami</h3>
-            <h4 class="video-info">20k vistas - 1 mes atrás</h4>
-          </div>
-        </div>
-        <div class="video">
-          <img
-            src="./styles/assets/image-4.png"
-            alt="A Yuki Tale - Yuki Mukami"
-            class="video-img"
-          />
-          <div class="video-text">
-            <h3 class="video-title">A Yuki Tale - Yuki Mukami</h3>
-            <h4 class="video-info">1m vistas - 1 año atrás</h4>
-          </div>
-        </div>
-        <div class="video">
-          <img
-            src="./styles/assets/image-5.png"
-            alt="Mapocho - Yuki Mukami"
-            class="video-img"
-          />
-          <div class="video-text">
-            <h3 class="video-title">Mapocho - Yuki Mukami</h3>
-            <h4 class="video-info">100k vistas - 1 mes atrás</h4>
-          </div>
-        </div>
-        <div class="video">
-          <img
-            src="./styles/assets/image-6.png"
-            alt="Lucky Days - Yuki Mukami"
-            class="video-img"
-          />
-          <div class="video-text">
-            <h3 class="video-title">Lucky Days- Yuki Mukami</h3>
-            <h4 class="video-info">40k vistas - 3 mes atrás</h4>
-          </div>
-        </div>
-        <div class="video">
-          <img
-            src="./styles/assets/image-7.png"
-            alt="30 days in My house - Yuki Mukami"
-            class="video-img"
-          />
-          <div class="video-text">
-            <h3 class="video-title">30 days in My house - Yuki Mukami</h3>
-            <h4 class="video-info">10k vistas - 4 meses atrás</h4>
-          </div>
-        </div>
-        <div class="video" role="button">
-          <img
-            src="./styles/assets/image-8.png"
-            alt="Santiago - Yuki Mukami"
-            class="video-img"
-          />
-          <div class="video-text">
-            <h3 class="video-title">Santiago - Yuki Mukami</h3>
-            <h4 class="video-info">40k vistas - 3 meses atrás</h4>
-          </div>
-        </div>
+        </a>
       </article>
+
+      <section
+        class="project-modal"
+        id="addet-desktop"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="addet-title"
+      >
+        <a class="modal-backdrop" href="#projects" aria-label="Cerrar galería"></a>
+        <div class="modal-content">
+          <div class="modal-header">
+            <div>
+              <p class="modal-kicker">Proyecto destacado</p>
+              <h2 id="addet-title">Addet Desktop</h2>
+            </div>
+            <a class="modal-close" href="#projects" aria-label="Cerrar galería">×</a>
+          </div>
+          <p class="modal-intro">
+            Sistema para gestionar clientes, motocicletas y órdenes de trabajo.
+            Cada pantalla fue diseñada y construida completamente a mano, antes
+            de la inteligencia artificial.
+          </p>
+          <div class="modal-gallery">
+            <figure>
+              <img
+                src="./assets/adet-desktop-desktop-view.png"
+                alt="Dashboard de Addet con acciones rápidas y órdenes de trabajo"
+              />
+              <figcaption>
+                Viewport desktop del dashboard: distribuye accesos rápidos,
+                clientes y órdenes en columnas amplias para aprovechar la pantalla.
+              </figcaption>
+            </figure>
+            <figure>
+              <img
+                src="./assets/adet-desktop-desktop-view-detalles.png"
+                alt="Detalle de una orden de trabajo en Addet"
+              />
+              <figcaption>
+                Viewport desktop de detalle: presenta servicios, repuestos, insumos
+                y total en una jerarquía creada manualmente para facilitar la lectura.
+              </figcaption>
+            </figure>
+            <figure>
+              <img
+                src="./assets/adet-desktop-desktop-view-motocicletas.png"
+                alt="Modal para registrar una motocicleta en Addet"
+              />
+              <figcaption>
+                Viewport desktop con modal de registro: formulario, contraste y
+                acciones fueron resueltos a mano, sin asistencia de IA.
+              </figcaption>
+            </figure>
+            <figure>
+              <img
+                src="./assets/adet-desktop-mobile-view.png"
+                alt="Dashboard de Addet adaptado a una pantalla móvil"
+              />
+              <figcaption>
+                Viewport mobile: reorganiza las acciones en una sola columna y
+                conserva controles táctiles cómodos en una pantalla estrecha.
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <section
+        class="project-modal"
+        id="portafolio"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="portfolio-title"
+      >
+        <a class="modal-backdrop" href="#projects" aria-label="Cerrar galería"></a>
+        <div class="modal-content">
+          <div class="modal-header">
+            <div>
+              <p class="modal-kicker">Proyecto personal</p>
+              <h2 id="portfolio-title">Portafolio</h2>
+            </div>
+            <a class="modal-close" href="#projects" aria-label="Cerrar galería">×</a>
+          </div>
+          <p class="modal-intro">
+            Primera versión de este portafolio responsivo. Su estructura, estilos y
+            adaptación entre viewports fueron construidos completamente a mano,
+            antes de la inteligencia artificial.
+          </p>
+          <div class="modal-gallery portfolio-gallery">
+            <figure>
+              <img
+                src="./assets/portafolio-antiguo-desktop-view.png"
+                alt="Versión anterior del portafolio en pantalla de escritorio"
+              />
+              <figcaption>
+                Viewport desktop: navegación completa, cabecera de perfil y una
+                grilla de contenido diseñada para recorrer el ancho disponible.
+              </figcaption>
+            </figure>
+            <figure>
+              <img
+                src="./assets/portafolio-antiguo-mobile-view.png"
+                alt="Versión anterior del portafolio en pantalla móvil"
+              />
+              <figcaption>
+                Viewport mobile: navegación simplificada y cards apiladas mediante
+                reglas responsivas escritas manualmente, sin herramientas de IA.
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
     </main>
   </body>
 </html>

@@ -68,46 +68,50 @@ main {
 }
 
 .profile {
+  align-items: center;
   display: flex;
   justify-content: center;
-  width: 80vw;
-  margin: 1em 1em;
-  align-items: center;
+  margin: 2em auto;
+  text-align: center;
+  width: 100%;
 }
 
 .profile-img {
-  width: 18vw;
-  height: 18vw;
   border-radius: 50%;
+  height: clamp(9rem, 24vw, 13rem);
+  object-fit: cover;
+  object-position: center;
+  width: clamp(9rem, 24vw, 13rem);
 }
 
 .profile-img-text {
-  display: flex;
-  justify-content: center;
   align-items: center;
-}
-
-.profile-text {
-  margin-left: 1.2em;
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+
+.profile-text {
+  display: flex;
+  flex-direction: column;
   font-family: 'Lato';
+  justify-content: center;
 }
 
 .profile-name {
   font-size: 2.2em;
-  letter-spacing: .05em;
   font-weight: 900;
-  margin-bottom: 0;
+  letter-spacing: .05em;
+  margin: .6em 0 0;
 }
 
-.profile-followers {
-  margin-top: .3em;
-  margin-left: .2em;
-  font-weight: 300;
-  font-size: 1.3em;
+.profile-description {
   color: gray;
+  font-size: 1.05em;
+  line-height: 1.5;
+  margin: .6em auto 0;
+  max-width: 34em;
+  padding: 0 1.5em;
 }
 
 .main-title {
@@ -181,36 +185,16 @@ main {
   }
 
   .profile {
-    width: 90vw;
-    justify-content: space-between;
+    margin: 2.5em auto;
   }
 
   .profile-img-text {
-    margin-left: 4em;
     align-items: center;
   }
 
-  .btn {
-    cursor: pointer;
-    border-radius: 0;
-    border: none;
-    font-size: 1.5em;
-    padding: 1em;
-    margin: .5em;
-    color: white;
-  }
-
-  .btn-primary {
-    background:rgb(146,220,229);
-  }
-
-  .btn-danger {
-    background: rgb(239,100,97);
-  }
-
   .profile-img {
-    width: 5vw;
-    height: 5vw;
+    height: 13rem;
+    width: 13rem;
   }
 
   .main-title {
@@ -229,5 +213,156 @@ main {
     width: 20vw;
     height: auto;
     margin: 1em 2em;
+  }
+}
+
+.project-card {
+  border: none;
+  color: black;
+  cursor: pointer;
+  overflow: hidden;
+  transition: box-shadow .2s ease, transform .2s ease;
+}
+
+.project-card:hover {
+  box-shadow: 0 .6em 1.5em rgba(0, 0, 0, .14);
+  transform: translateY(-.2em);
+}
+
+.project-card:focus-visible {
+  box-shadow: 0 .6em 1.5em rgba(0, 0, 0, .14);
+  outline: .18em solid rgb(239,100,97);
+  outline-offset: .2em;
+  transform: translateY(-.2em);
+}
+
+.main-content {
+  margin: 1.5em auto 3em;
+  max-width: 100rem;
+  padding: 0 1.5em;
+}
+
+.project-card .video-img {
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  object-position: top;
+}
+
+.project-modal {
+  align-items: center;
+  display: none;
+  inset: 0;
+  justify-content: center;
+  padding: 1em;
+  position: fixed;
+  z-index: 10;
+}
+
+.project-modal:target {
+  display: flex;
+}
+
+.modal-backdrop {
+  background: rgba(0, 0, 0, .72);
+  inset: 0;
+  position: absolute;
+}
+
+.modal-content {
+  background: white;
+  border-top: .4em solid rgb(146,220,229);
+  box-shadow: 0 1em 3em rgba(0, 0, 0, .35);
+  max-height: 90vh;
+  max-width: 76em;
+  overflow-y: auto;
+  padding: 1.2em;
+  position: relative;
+  width: 100%;
+  z-index: 1;
+}
+
+.modal-header {
+  align-items: flex-start;
+  display: flex;
+  font-family: 'Lato', sans-serif;
+  justify-content: space-between;
+}
+
+.modal-header h2 {
+  font-size: 2em;
+  margin: 0;
+}
+
+.modal-kicker {
+  color: rgb(239,100,97);
+  font-size: .9em;
+  font-weight: 900;
+  letter-spacing: .08em;
+  margin: 0 0 .4em;
+  text-transform: uppercase;
+}
+
+.modal-close {
+  align-items: center;
+  background: rgb(239,100,97);
+  color: white;
+  display: flex;
+  flex: 0 0 2.2em;
+  font-size: 1.5em;
+  height: 2.2em;
+  justify-content: center;
+  margin-left: 1em;
+}
+
+.modal-close:hover,
+.modal-close:focus-visible {
+  background: rgb(146,220,229);
+  color: black;
+  outline: .15em solid black;
+}
+
+.modal-intro {
+  font-family: 'Lato', sans-serif;
+  font-size: 1.05em;
+  line-height: 1.6;
+  max-width: 55em;
+}
+
+.modal-gallery {
+  display: grid;
+  gap: 1.2em;
+  grid-template-columns: 1fr;
+}
+
+.modal-gallery figure {
+  border: 1px solid #ddd;
+  margin: 0;
+}
+
+.modal-gallery img {
+  display: block;
+  height: auto;
+  width: 100%;
+}
+
+.modal-gallery figcaption {
+  border-top: .3em solid rgb(146,220,229);
+  font-family: 'Lato', sans-serif;
+  font-size: 1em;
+  line-height: 1.5;
+  padding: 1em;
+}
+
+@media(min-width: 1000px) {
+  .project-card {
+    width: 38vw;
+  }
+
+  .modal-content {
+    padding: 2em;
+  }
+
+  .modal-gallery {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
