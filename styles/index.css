@@ -228,15 +228,17 @@ main {
   color: black;
   cursor: pointer;
   overflow: hidden;
-  transition: box-shadow .2s ease, transform .2s ease;
+  transition: border-radius .2s ease, box-shadow .2s ease, transform .2s ease;
 }
 
 .project-card:hover {
+  border-radius: .6em;
   box-shadow: 0 .6em 1.5em rgba(0, 0, 0, .14);
   transform: translateY(-.2em);
 }
 
 .project-card:focus-visible {
+  border-radius: .6em;
   box-shadow: 0 .6em 1.5em rgba(0, 0, 0, .14);
   outline: .18em solid rgb(239,100,97);
   outline-offset: .2em;
