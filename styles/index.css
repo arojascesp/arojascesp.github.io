@@ -37,23 +37,35 @@ main {
 .navbar-title {
   display: flex;
   flex-direction: column;
-  font-size: 3.5em;
   font-family: 'League Spartan', sans-serif;
-  padding-left: .8em;
   font-weight: 400;
-}
-.navbar-exp-title {
-  text-align: end;
-  font-weight: 400;
-  font-size: .35em;
+  margin: .5em 0;
+  padding-left: 1.5em;
 }
 
-.hidden {
-  display: none;
+.navbar-exp-title {
+  font-size: .9rem;
+  font-weight: 400;
+  letter-spacing: .12em;
+  line-height: 1;
+  padding-right: .15em;
+  text-align: end;
+}
+
+.navbar-role {
+  font-size: clamp(1.45rem, 5.5vw, 3.5rem);
+  line-height: 1;
+  white-space: nowrap;
 }
 
 .navbar-items {
   margin-right: 2em;
+}
+
+.navbar-items ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 .navbar-item {
@@ -162,14 +174,9 @@ main {
     margin-right: 4em;
   }
 
-  .hidden {
-    display: inline;
-  }
-
-
   .navbar-items ul {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: flex-end;
   }
 
   .navbar-item {
